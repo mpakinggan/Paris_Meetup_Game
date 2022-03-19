@@ -6,7 +6,7 @@
 Final Project for CS 180: Intro to Computer Graphics
 
 
-Website: 
+Website: https://mpakinggan.github.io/Paris_Meetup_Game/
 
 <br/>
 
