@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Maria Pakinggan – 180 Project</title>
+
+    <div class="jumbotron jumbotron-fluid">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th style="width: 40%" scope="row" class="align-bottom">
+              <div class="container">
+                <h1 class="display-4">Paris Meet Up</h1>
+                <h3 class="display-6">CS 180 Project by Maria Pakinggan</h3>
+              </div>
+            </th>
+            <th>
+              <img class="img-fluid" src="title.jpg">
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </head>
+  <body>
+    <div  class="container">
+
+    <h1 class="display-4" style="margin-top: 50px; margin-bottom: 10px; text-align: left;">Project Description</h1>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th style="width: 33.33%" scope="row" class="align-middle">
+            <span class="font-weight-normal" style="text-align: left;">
+                <p>My final project is a simple objective game, where the player must meet up with a person at the bottom of the Eiffel Tower.</p>
+                <p>However, Paris is a busy tourist attraction, so the player will encounter multiple obstacles, like crowds of people, on their route.</P>
+                <p>The only way to end the game is to reach your destination.</P>
+            </span>
+          </th>
+          <th>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/t3zNB1LpVn8?autoplay=1&mute=1&loop=1&playlist=t3zNB1LpVn8&autohide=1&controls=0&rel=0&modestbranding=1" allowfullscreen></iframe>
+            </div>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1 class="display-4" style="margin-top: 50px; margin-bottom: 10px; text-align: left;">Player Controls</h1>
+    <div class="card" style="margin-left: 5%; margin-right: 5%">
+        <ul class="list-unstyled" style="margin-left: 25px;margin-right: 25px;margin-top: 15px;margin-bottom: 15px">
+          <li>• WASD: to move the player/camera</li>
+          <li>• Trackpad Scroll: to look around the scene and control which direction the player goes</li>
+          <li>• R: to reset the game</li>
+          <li>• M: to change mode of game</li>
+            <ul>
+              <li>Normal: any collision will only cause a slight bounce back</li>
+              <li>Frustrating: any collision will reset your position back to the start</li>
+            </ul>
+        </ul>
+    </div>
+
+    <h1 class="display-4" style="margin-top: 50px; margin-bottom: 10px; text-align: left;">Images</h1>
+    <div class="row" style="margin-left: 0%; margin-right: 0%">
+      <div class="card" style="width: 20%;">
+        <img class="card-img-top" src="destination.jpg">
+        <div class="card-body">
+          <p class="card-text">Objective of the game is to meet up with the person at the bottom of the Eiffel Tower.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 20%;">
+        <img class="card-img-top" src="end.jpg">
+        <div class="card-body">
+          <p class="card-text">Once the player reaches person, the animation of the player changes from walking to waving, and the game camera pans around the scene.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 20%;">
+        <img class="card-img-top" src="keyframes.jpg">
+        <div class="card-body">
+          <p class="card-text">The walking animation used Bezier Curves to interpolate between the above keyframes.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 20%;">
+        <img class="card-img-top" src="fence.jpg">
+        <div class="card-body">
+          <p class="card-text">The scene is surrounded by trees, fences, and crowds of people to build up the environment and limit the player's movement using natural boundaries.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 20%;">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1N532jMr1dA?autoplay=1&mute=1&loop=1&playlist=1N532jMr1dA&autohide=1&controls=0&rel=0&modestbranding=1" allowfullscreen></iframe>
+        <div class="card-body">
+          <p class="card-text">During the game, if the player collides with anything in the scene, the player will slightly bounce back.</p>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="display-4" style="margin-top: 50px; margin-bottom: 10px; text-align: left;">Graphics Technologies Used</h1>
+    <div class="card" style="margin-left: 5%; margin-right: 5%">
+        <ul class="list-unstyled" style="margin-left: 25px;margin-right: 25px;margin-top: 15px;margin-bottom: 15px">
+          <li>• Blinn-Phong Shading with Directional Lighting</li>
+          <li>• Game Camera</li>
+            <ul>
+              <li>For most of game, used for 1st player POV</li>
+              <li>At then end, used to cinematically pan over the scene</li>
+            </ul>
+          <li>• Texturing
+            <ul>
+              <li>Skybox</li>
+              <li>Ground</li>
+              <li>Tree Models</li>
+            </ul>
+          </li>
+          <li>• AABB - Circle Collision Detection</li>
+          <li style="font-weight: bold;">• Animation using Hierarchical Modeling</li>
+            <ul>
+              <li>Scripted animation for the waving dummy</li>
+              <li>Interpolated between keyframes for the walking dummy</li>
+            </ul>
+          <li>• Splines + Bezier Curves</li>
+            <ul>
+              <li>For game camera</li>
+              <li>For calculating angles used in the walking animation</li>
+              <li>For determining the path of the walking dummies</li>
+            </ul>
+        </ul>
+    </div>
+
+    <h1 class="display-4" style="margin-top: 50px; margin-bottom: 10px; text-align: left;">Resources</h1>
+    <div class="card" style="margin-left: 5%; margin-right: 5%; margin-bottom: 50px">
+        <ul class="list-unstyled" style="margin-left: 25px;margin-right: 25px;margin-top: 15px;margin-bottom: 15px">
+          <li>• <a href="https://www.cgtrader.com/free-3d-models/character/other/watercolour-people-2d"> <i>Watercolour People 2D</i></a>, tito-r</li>
+          <li>• <a href="https://www.cgtrader.com/free-3d-models/plant/other/low-poly-trees-d9e99730-93d6-4564-a477-7ec52a990a3c"> <i>Low-Poly Trees</i></a>, zedvenom</li>
+          <li>• <a href="https://www.cgtrader.com/free-3d-models/architectural/engineering/eiffel-tower-056df590-f97e-4f93-8e11-3f2bd25951da"> <i>Eiffel Tower</i></a>, cbmbeach</li>
+          <li>• <a href="https://www.cgtrader.com/free-3d-models/exterior/street/metal-fence-0cae6c48-0c60-4a5e-998e-6daece737ec7"> <i>Metal Fence</i></a>, vilitay</li>
+          <li>• <a href="https://www.flickr.com/photos/gadl/2806483175"> <i>Eiffel Tower Panorama (skybox texture)</i></a>, Alexandre Duret-Lutz</li>
+          <li>• <a href="https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection"> <i>AABB - Circle Collision Detection</i></a>, LearnOpenGL</li>
+          <li>• <a href="https://learnopengl.com/Lighting/Light-casters"> <i>Directional Light Shader</i></a>, LearnOpenGL</li>
+          <li>• <a href="http://users.csc.calpoly.edu/~zwood/teaching/csc471/finalS19/elsouza/index.html"><i>Original Webpage</i></a>, Elleis Souza</li>
+          <li>• Original Base Code (P4SplineExample) and dummy.obj, Zoë Wood</li>
+        </ul>
+    </div>
+
+    </div>
+  </body>
+</html>
